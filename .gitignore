@@ -39,3 +39,11 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Create .gitignore
+echo node_modules/ >> .gitignore
+echo .env >> .gitignore
+echo venv/ >> .gitignore
+echo __pycache__/ >> .gitignore
+echo .expo/ >> .gitignore
+backend/.env
