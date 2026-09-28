@@ -1,0 +1,101 @@
+COMMON SYMPTOMS PRE-TRIAGE GUIDE
+=================================
+
+This guide helps patients describe and understand their symptoms before seeing a doctor. The HealthBot uses this information to help summarize your condition for the medical team.
+
+HOW TO DESCRIBE YOUR SYMPTOMS
+When asked about your symptoms, try to cover these points:
+1. What exactly are you feeling? (pain, dizziness, shortness of breath, nausea, etc.)
+2. Where on your body is the symptom? (head, chest, stomach, legs, etc.)
+3. When did it start? (today, yesterday, a week ago)
+4. How severe is it on a scale of 1 to 10? (1 = barely noticeable, 10 = worst pain of your life)
+5. Is it constant or does it come and go?
+6. What makes it better? (rest, eating, lying down)
+7. What makes it worse? (movement, eating, breathing deeply)
+8. Do you have any other symptoms along with the main one?
+
+---
+
+HEADACHE
+Description: Pain or pressure in the head, scalp, or neck.
+Common causes: Tension, dehydration, lack of sleep, eye strain, sinus congestion, high blood pressure.
+Seek emergency care immediately if: The headache is sudden and extremely severe (described as the worst headache of your life), is accompanied by fever and stiff neck, follows a head injury, causes vision changes or confusion, or one side of your face or body feels weak.
+Tell the doctor: When it started, where in your head the pain is, what the pain feels like (throbbing, pressure, stabbing), whether light or noise makes it worse, and any recent illness or injury.
+
+CHEST PAIN
+Description: Any pain, tightness, pressure, burning, or discomfort in the chest.
+Important: Chest pain should always be evaluated urgently. Do not assume it is minor.
+Seek emergency care immediately if: The pain is crushing, squeezing, or pressure-like, spreads to the arm, jaw, neck, or back, comes with sweating, nausea, or shortness of breath, or you feel your heart is racing or skipping beats.
+Tell the doctor: Exactly where the pain is, what it feels like, when it started, whether it comes and goes or is constant, and whether anything makes it better or worse.
+
+SHORTNESS OF BREATH
+Description: Difficulty breathing, feeling like you cannot get enough air, or breathing faster than normal.
+Seek emergency care immediately if: You cannot complete a full sentence without stopping to breathe, your lips or fingertips are turning blue, you are wheezing loudly, or breathing difficulty came on suddenly.
+Common causes: Asthma, anxiety, chest infection, heart problems, allergic reaction.
+Tell the doctor: How long you have had difficulty breathing, whether it came on suddenly or gradually, whether anything triggered it, and any chest pain or cough that came with it.
+
+FEVER
+Description: Body temperature above 38°C (100.4°F).
+Seek emergency care immediately if: Temperature is above 40°C (104°F), the person is a baby under 3 months old, the fever is accompanied by a stiff neck, severe headache, confusion, rash, or difficulty breathing.
+Common causes: Infection (viral or bacterial), inflammatory conditions.
+Tell the doctor: How high the temperature is, how long you have had it, any other symptoms (cough, sore throat, body aches, rash), and any recent travel or contact with sick people.
+
+ABDOMINAL PAIN (STOMACH PAIN)
+Description: Pain anywhere between the chest and the pelvis.
+Seek emergency care immediately if: The pain is severe and sudden, the abdomen is rigid or very tender to touch, there is blood in vomit or stool, you cannot pass gas or have not had a bowel movement for days, or you suspect appendicitis (pain starting near the navel then moving to the lower right side).
+Common causes: Gastritis, constipation, gas, food poisoning, urinary tract infection, appendicitis, gallstones, menstrual cramps.
+Tell the doctor: Exactly where the pain is, what it feels like, when it started, whether it is related to eating, and any vomiting, diarrhea, fever, or urinary symptoms.
+
+NAUSEA AND VOMITING
+Description: Feeling sick to the stomach, with or without actually vomiting.
+Seek emergency care immediately if: There is blood in the vomit, vomiting is severe and constant for more than 24 hours, it is accompanied by severe stomach pain, or you show signs of dehydration (very dry mouth, no urination, dizziness).
+Common causes: Food poisoning, viral infection (stomach flu), medication side effect, pregnancy, migraine.
+Tell the doctor: How long you have been vomiting, how many times, what the vomit looks like, whether you can keep any fluids down, and any stomach pain or fever.
+
+DIZZINESS
+Description: Feeling lightheaded, unsteady, or like the room is spinning.
+Seek emergency care immediately if: Dizziness is severe and sudden, is accompanied by chest pain, shortness of breath, or numbness, you faint or nearly faint, or it follows a head injury.
+Common causes: Dehydration, low blood sugar, inner ear infection, low blood pressure, anemia, anxiety.
+Tell the doctor: Whether the room feels like it is spinning (vertigo) or you feel lightheaded, how long episodes last, what triggers them, and any hearing changes, ringing in the ears, or nausea.
+
+BACK PAIN
+Description: Pain in the upper, middle, or lower back, with or without leg pain.
+Seek emergency care immediately if: Pain follows a serious injury or fall, you lose bladder or bowel control, you have weakness or numbness in both legs, or you have fever with severe back pain (possible kidney infection or spinal problem).
+Common causes: Muscle strain, poor posture, herniated disc, kidney infection, arthritis.
+Tell the doctor: Where in your back the pain is, whether it spreads to your legs or buttocks, how long you have had it, what makes it better or worse, and any recent injury.
+
+RASH
+Description: Any change in skin colour, texture, or appearance.
+Seek emergency care immediately if: The rash is spreading rapidly, is accompanied by difficulty breathing or throat swelling (possible severe allergy), appears as a non-fading purple or red rash with fever (possible meningitis — press a glass to the rash; if it does not fade, call emergency services).
+Common causes: Allergic reaction, eczema, heat rash, viral infection, contact with irritants.
+Tell the doctor: When it appeared, where it started and whether it has spread, whether it is itchy or painful, and any new soaps, foods, medications, or environmental exposures.
+
+URINARY PROBLEMS
+Description: Pain, burning, frequency, urgency, or blood when urinating.
+Seek emergency care if: There is blood in the urine with pain, you cannot urinate at all, or there is severe pain in the side or back along with fever (possible kidney infection).
+Common causes: Urinary tract infection (UTI), kidney stones, prostate problems (in men), dehydration.
+Tell the doctor: What the symptom is exactly (burning, frequency, urgency, blood), how long you have had it, any pain in the back or side, any fever, and whether it has happened before.
+
+JOINT AND MUSCLE PAIN
+Description: Pain, swelling, stiffness, or tenderness in joints or muscles.
+Seek emergency care if: A joint is severely swollen, red, and hot (possible septic arthritis — a joint infection), or pain follows a serious injury and you cannot bear weight.
+Common causes: Overuse, viral illness (body aches), arthritis, gout, injury.
+Tell the doctor: Which joints or muscles are affected, when the pain started, whether it followed an injury or activity, whether the joint is swollen or red, and any recent illness or fever.
+
+SWELLING (OEDEMA)
+Description: Abnormal fluid buildup causing puffiness in the legs, ankles, feet, or hands.
+Seek emergency care immediately if: One leg is swollen, red, warm, and painful (possible blood clot), or swelling in the face, lips, or throat (severe allergic reaction).
+Common causes: Heart failure, kidney disease, poor circulation, medication side effects, pregnancy.
+Tell the doctor: Where the swelling is, when it started, whether it is in one or both limbs, any pain or redness, and whether it is worse at certain times of day.
+
+---
+
+MEDICATION INFORMATION TO TELL YOUR DOCTOR
+Always inform the medical team of:
+- All prescription medications you are currently taking (name and dose if known)
+- Any over-the-counter medicines or supplements (vitamins, herbal remedies)
+- Any allergies to medications, foods, or substances
+- Whether you are pregnant or breastfeeding
+- Any recent changes to your medications
+
+This information is critical and could affect your diagnosis and treatment.

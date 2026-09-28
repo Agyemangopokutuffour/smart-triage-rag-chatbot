@@ -9,6 +9,10 @@ import re
 from datetime import datetime
 from dotenv import load_dotenv
 
+# ── RAG IMPORT ───────────────────────────────────────────────────────────────
+from rag.retriever import retrieve, get_collection
+# ─────────────────────────────────────────────────────────────────────────────
+
 load_dotenv()
 
 app = FastAPI(title="Smart Triage Backend")
@@ -26,6 +30,7 @@ client = OpenAI(
 )
 
 print("✅ Backend Started")
+print("✅ RAG pipeline loaded")
 
 # ================== DEMO DATA ==================
 DOCTORS = [
@@ -53,22 +58,49 @@ class JoinQueueRequest(BaseModel):
     urgency: str
     symptoms: str
 
-# ================== CHAT ==================
+# ================== CHAT (RAG-POWERED) ==================
+
+@app.on_event("startup")
+def warm_up():
+    get_collection()
+    
 @app.post("/chat")
 async def chat(body: ChatRequest):
     try:
-        messages = [
-            {
-                "role": "system",
-                "content": """You are TriageHelper. Help patients describe symptoms clearly.
+        # ── STEP 1: Retrieve relevant context from ChromaDB ──────────────────
+        rag_context = retrieve(body.message, top_k=3)
+
+        # ── STEP 2: Build system prompt with RAG context injected ────────────
+        if rag_context:
+            system_prompt = f"""You are TriageHelper, an intelligent pre-triage health assistant at a general hospital.
+Your job is to help patients understand their symptoms and condition clearly before they see a doctor.
+You also answer general health and hospital questions accurately.
+
+You have access to the following verified hospital knowledge to help you answer:
+
+--- HOSPITAL KNOWLEDGE ---
+{rag_context}
+--- END OF KNOWLEDGE ---
+
+RULES:
+- Use the hospital knowledge above to give accurate, grounded answers.
+- If the knowledge covers the patient's question, answer from it directly.
+- If the patient is describing symptoms, ask one clear question at a time to understand their condition better.
+- When you have enough symptom information, end your message with exactly: [SYMPTOMS READY]: <short summary>
+- Never diagnose. Never recommend specific medications or dosages.
+- If symptoms sound like an emergency (chest pain, difficulty breathing, loss of consciousness), tell the patient to seek emergency care immediately.
+- Always be warm, calm, and easy to understand. Avoid medical jargon.
+- You are not a doctor. Always recommend the patient sees a doctor for proper evaluation."""
+        else:
+            # fallback if RAG returns nothing
+            system_prompt = """You are TriageHelper. Help patients describe symptoms clearly.
 Ask one question at a time.
 When ready, end with exactly: [SYMPTOMS READY]: <short summary>"""
-            }
-        ]
 
-        # Use a safe copy of incoming history and avoid unbounded growth
+        # ── STEP 3: Build message history ────────────────────────────────────
+        messages = [{"role": "system", "content": system_prompt}]
+
         incoming_history = body.conversation_history or []
-        # Keep only the most recent N turns to limit payload size
         max_history_messages = 20
         truncated_history = incoming_history[-max_history_messages:]
 
@@ -78,26 +110,29 @@ When ready, end with exactly: [SYMPTOMS READY]: <short summary>"""
 
         messages.append({"role": "user", "content": body.message})
 
+        # ── STEP 4: Send to OpenRouter ────────────────────────────────────────
         response = client.chat.completions.create(
             model="openai/gpt-4o-mini",
             messages=messages,
-            temperature=0.7,
+            temperature=0.3,
             max_tokens=700
         )
 
         reply = response.choices[0].message.content.strip()
 
-        # Return a bounded updated history so the frontend doesn't keep growing it indefinitely
-        updated = (incoming_history + [{"role": "user", "content": body.message}, {"role": "assistant", "content": reply}])
+        updated = (incoming_history + [
+            {"role": "user", "content": body.message},
+            {"role": "assistant", "content": reply}
+        ])
         updated_history = updated[-(max_history_messages * 2):]
 
         return {
             "reply": reply,
             "updated_history": updated_history
         }
+
     except Exception as e:
         print("Chat Error:", str(e))
-        # Provide a safe fallback reply so the frontend remains responsive
         fallback_reply = (
             "I couldn't reach the AI service right now. "
             "Please briefly summarize your main symptom and how long you've had it."
@@ -116,8 +151,7 @@ When ready, end with exactly: [SYMPTOMS READY]: <short summary>"""
 @app.post("/triage")
 async def triage(body: SymptomRequest):
     symptoms = body.symptoms.lower().strip()
-    
-    # Reliable Keyword Triage
+
     if any(word in symptoms for word in ["chest", "heart", "breath", "breathing", "unconscious", "seizure", "stroke", "bleed", "attack", "faint", "heart attack"]):
         urgency = "severe"
         message = "This sounds like a serious or emergency condition. Please go to the Emergency Room immediately or call for help."

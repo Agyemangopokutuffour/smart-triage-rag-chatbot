@@ -6,11 +6,8 @@ import {
   TouchableOpacity,
   StyleSheet,
   FlatList,
-  KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
-  TouchableWithoutFeedback,
-  Keyboard,
 } from "react-native";
 import axios from "axios";
 import { Ionicons } from "@expo/vector-icons";
@@ -35,7 +32,6 @@ export default function ChatScreen({ navigation }) {
     flatListRef.current?.scrollToEnd({ animated: true });
   }, [messages]);
 
-  // Check if the bot has finished collecting symptoms
   const extractSymptoms = (text) => {
     const match = text.match(/\[SYMPTOMS READY\]:\s*(.+)/i);
     return match ? match[1].trim() : null;
@@ -62,14 +58,9 @@ export default function ChatScreen({ navigation }) {
       });
 
       const reply = response.data.reply;
-
-      // Check if symptoms are ready
       const symptoms = extractSymptoms(reply);
-      if (symptoms) {
-        setReadySymptoms(symptoms);
-      }
+      if (symptoms) setReadySymptoms(symptoms);
 
-      // Clean the [SYMPTOMS READY] tag from the displayed message
       const displayReply = reply
         .replace(/\[SYMPTOMS READY\]:\s*.+/i, "")
         .trim();
@@ -102,70 +93,65 @@ export default function ChatScreen({ navigation }) {
   };
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.container}
-        keyboardVerticalOffset={Platform.OS === "ios" ? 80 : 0}
-      >
-        <FlatList
-          ref={flatListRef}
-          data={messages}
-          keyExtractor={(item) => item.id}
-          style={styles.messageList}
-          renderItem={({ item }) => (
-            <View
-              style={[
-                styles.messageBubble,
-                item.role === "user" ? styles.userBubble : styles.botBubble,
-              ]}
+    <View style={styles.container}>
+      <FlatList
+        ref={flatListRef}
+        data={messages}
+        keyExtractor={(item) => item.id}
+        style={styles.messageList}
+        contentContainerStyle={{ paddingBottom: 16 }}
+        renderItem={({ item }) => (
+          <View
+            style={[
+              styles.messageBubble,
+              item.role === "user" ? styles.userBubble : styles.botBubble,
+            ]}
+          >
+            <Text
+              style={item.role === "user" ? styles.userText : styles.botText}
             >
-              <Text
-                style={item.role === "user" ? styles.userText : styles.botText}
-              >
-                {item.content}
-              </Text>
-            </View>
-          )}
-        />
-
-        {loading && (
-          <View style={styles.typingContainer}>
-            <ActivityIndicator size="small" color="#007bff" />
-            <Text style={styles.typingText}>TriageHelper is typing...</Text>
+              {item.content}
+            </Text>
           </View>
         )}
+      />
 
-        {/* Send to Triage button — appears when symptoms are ready */}
-        {readySymptoms && (
-          <TouchableOpacity style={styles.triageBtn} onPress={goToTriage}>
-            <Ionicons name="pulse" size={20} color="#fff" />
-            <Text style={styles.triageBtnText}>Send Symptoms to Triage</Text>
-            <Ionicons name="arrow-forward" size={20} color="#fff" />
-          </TouchableOpacity>
-        )}
-
-        <View style={styles.inputArea}>
-          <TextInput
-            style={styles.input}
-            value={input}
-            onChangeText={setInput}
-            placeholder="Describe how you feel..."
-            multiline
-          />
-          <TouchableOpacity
-            style={[
-              styles.sendButton,
-              (!input.trim() || loading) && styles.sendButtonDisabled,
-            ]}
-            onPress={sendMessage}
-            disabled={loading || !input.trim()}
-          >
-            <Ionicons name="send" size={24} color="#fff" />
-          </TouchableOpacity>
+      {loading && (
+        <View style={styles.typingContainer}>
+          <ActivityIndicator size="small" color="#007bff" />
+          <Text style={styles.typingText}>TriageHelper is typing...</Text>
         </View>
-      </KeyboardAvoidingView>
-    </TouchableWithoutFeedback>
+      )}
+
+      {readySymptoms && (
+        <TouchableOpacity style={styles.triageBtn} onPress={goToTriage}>
+          <Ionicons name="pulse" size={20} color="#fff" />
+          <Text style={styles.triageBtnText}>Send Symptoms to Triage</Text>
+          <Ionicons name="arrow-forward" size={20} color="#fff" />
+        </TouchableOpacity>
+      )}
+
+      <View style={styles.inputArea}>
+        <TextInput
+          style={styles.input}
+          value={input}
+          onChangeText={setInput}
+          placeholder="Describe how you feel..."
+          multiline
+          onSubmitEditing={sendMessage}
+        />
+        <TouchableOpacity
+          style={[
+            styles.sendButton,
+            (!input.trim() || loading) && styles.sendButtonDisabled,
+          ]}
+          onPress={sendMessage}
+          disabled={loading || !input.trim()}
+        >
+          <Ionicons name="send" size={24} color="#fff" />
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }
 

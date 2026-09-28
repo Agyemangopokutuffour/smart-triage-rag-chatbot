@@ -1,0 +1,71 @@
+HOSPITAL TRIAGE LEVELS AND SYMPTOM GUIDE
+=========================================
+
+WHAT IS TRIAGE?
+Triage is the process of quickly assessing patients when they arrive at the hospital to determine how urgently they need medical care. Every patient is assigned a triage level based on the severity of their condition.
+
+TRIAGE LEVEL 1 — IMMEDIATE (RED)
+These patients are in life-threatening danger and need care right away.
+Symptoms include:
+- Chest pain or pressure (possible heart attack)
+- Difficulty breathing or not breathing
+- Unconsciousness or unresponsiveness
+- Severe allergic reaction (throat swelling, cannot swallow)
+- Uncontrolled or heavy bleeding
+- Signs of stroke: face drooping on one side, arm weakness, slurred speech
+- Severe head injury or trauma
+- Suspected overdose from drugs or medication
+- Seizures that do not stop
+- Very low blood pressure (shock)
+Expected wait time: Seen immediately. No waiting.
+
+TRIAGE LEVEL 2 — URGENT (ORANGE)
+These patients have serious conditions that could get worse quickly but are not immediately life-threatening.
+Symptoms include:
+- Chest pain without breathing difficulty (needs fast evaluation)
+- High fever above 39.5°C (103°F) especially in children under 3 or adults over 65
+- Severe abdominal pain
+- Broken bones or suspected fractures
+- Head injury where patient is conscious but confused
+- Severe vomiting or diarrhea with signs of dehydration
+- Moderate allergic reaction (hives, swelling but airway is fine)
+- Mental health crisis (severe anxiety, suicidal thoughts)
+- Sudden severe eye pain or vision loss
+Expected wait time: Seen within 15 to 30 minutes.
+
+TRIAGE LEVEL 3 — LESS URGENT (YELLOW)
+These patients need medical care but their condition is stable and not worsening rapidly.
+Symptoms include:
+- Moderate pain (headache, back pain, tooth pain)
+- Fever between 38°C and 39.5°C (100.4°F to 103°F)
+- Minor cuts that may need stitches
+- Mild to moderate breathing difficulty (asthma flare without severe distress)
+- Urinary tract infection symptoms (burning, frequent urination)
+- Mild vomiting or diarrhea without dehydration
+- Sprain or strain injuries
+- Ear pain or ear infection
+- Eye redness or discharge (pink eye)
+Expected wait time: Seen within 30 to 60 minutes.
+
+TRIAGE LEVEL 4 — NON-URGENT (GREEN)
+These patients have minor conditions that do not require immediate attention.
+Symptoms include:
+- Minor cuts, scrapes, or bruises
+- Mild headache or cold symptoms
+- Rash without other symptoms
+- Mild sore throat
+- Minor burns covering a small area
+- Chronic condition follow-up
+Expected wait time: Seen within 1 to 2 hours.
+
+TRIAGE LEVEL 5 — MINOR (BLUE)
+These patients have very minor issues that could often be handled at a pharmacy or GP clinic.
+Symptoms include:
+- Prescription refill requests
+- Minor skin conditions
+- General wellness questions
+- Mild cold or flu without complications
+Expected wait time: Seen within 2 hours or may be redirected to outpatient clinic.
+
+IMPORTANT NOTE FOR PATIENTS:
+The triage nurse will assess you when you arrive. Please be honest and thorough when describing your symptoms. Do not minimize your pain or discomfort — accurate information helps the team prioritize your care correctly. If your condition worsens while you are waiting, immediately inform the triage nurse or front desk staff.

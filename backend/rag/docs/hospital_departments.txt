@@ -1,0 +1,90 @@
+HOSPITAL DEPARTMENTS GUIDE
+==========================
+
+This document helps patients understand which department handles their specific health concern so they can be directed appropriately.
+
+EMERGENCY DEPARTMENT (ED) / CASUALTY
+Handles: Life-threatening and urgent conditions requiring immediate care.
+Go here for: Chest pain, difficulty breathing, stroke symptoms, severe injuries, heavy bleeding, loss of consciousness, severe allergic reactions, overdose.
+Do not go here for: Minor colds, prescription refills, routine checkups. These cases slow down emergency care for critically ill patients.
+
+OUTPATIENT DEPARTMENT (OPD) / GENERAL CLINIC
+Handles: Non-emergency consultations, follow-up visits, and general health concerns.
+Go here for: General illness, chronic condition management, follow-up after hospital discharge, referrals to specialists, mild infections.
+Booking: Walk-in or appointment depending on the hospital. Arrive early as slots fill quickly.
+
+ACCIDENT AND TRAUMA UNIT
+Handles: Physical injuries from accidents, falls, or violence.
+Go here for: Broken bones, dislocations, head injuries, deep wounds, road traffic accident injuries, burns.
+
+MATERNITY AND LABOUR WARD
+Handles: Pregnancy-related care, delivery, and postnatal care.
+Go here for: Labour and delivery, pregnancy complications, prenatal checkups, postnatal care for mother and newborn.
+Note: Call ahead if possible. Fathers or support persons may accompany patients depending on hospital policy.
+
+PAEDIATRIC DEPARTMENT (CHILDREN'S WARD)
+Handles: Medical care for children from newborn to 17 years old.
+Go here for: Sick children, childhood illnesses, vaccinations, growth and development concerns, paediatric emergencies.
+Note: A parent or guardian must accompany the child at all times.
+
+SURGICAL DEPARTMENT
+Handles: Operations and surgical procedures.
+Go here for: Elective or emergency surgery, pre-operative assessment, post-operative care and recovery.
+
+MEDICAL WARD (INTERNAL MEDICINE)
+Handles: Diagnosis and treatment of complex internal diseases.
+Go here for: Diabetes management, heart disease, kidney problems, liver conditions, infectious diseases, complex chronic illnesses.
+
+CARDIOLOGY DEPARTMENT
+Handles: Heart and cardiovascular conditions.
+Go here for: Chest pain investigation, irregular heartbeat, high blood pressure complications, heart failure, post-heart attack care.
+
+ORTHOPAEDIC DEPARTMENT
+Handles: Bones, joints, and musculoskeletal system.
+Go here for: Fractures, joint pain, arthritis, back and spine problems, sports injuries, bone infections.
+
+NEUROLOGY DEPARTMENT
+Handles: Brain and nervous system conditions.
+Go here for: Stroke follow-up, epilepsy, migraines, memory problems, Parkinson's disease, nerve damage, multiple sclerosis.
+
+GYNAECOLOGY DEPARTMENT
+Handles: Female reproductive health.
+Go here for: Menstrual problems, pelvic pain, fibroids, infections, cervical screening, menopause-related concerns.
+
+UROLOGY DEPARTMENT
+Handles: Urinary tract and male reproductive system.
+Go here for: Kidney stones, urinary infections, prostate problems, bladder issues, blood in urine.
+
+EAR, NOSE AND THROAT (ENT) DEPARTMENT
+Handles: Conditions of the ear, nose, throat, and related structures.
+Go here for: Chronic ear infections, hearing loss, sinusitis, tonsil problems, voice disorders, nasal blockage.
+
+EYE DEPARTMENT (OPHTHALMOLOGY)
+Handles: Eye and vision conditions.
+Go here for: Sudden vision changes, eye injuries, cataracts, glaucoma, infections, chronic eye conditions.
+
+DERMATOLOGY DEPARTMENT
+Handles: Skin, hair, and nail conditions.
+Go here for: Persistent rashes, eczema, psoriasis, acne, skin infections, suspicious moles, hair loss.
+
+PHYSIOTHERAPY DEPARTMENT
+Handles: Physical rehabilitation and movement therapy.
+Go here for: Recovery after surgery or injury, back and joint pain management, stroke rehabilitation, sports injury recovery.
+
+RADIOLOGY AND IMAGING DEPARTMENT
+Handles: Diagnostic imaging (X-ray, ultrasound, CT scan, MRI).
+Go here for: Doctor-requested scans only. You need a referral from another department or doctor to access imaging services.
+
+LABORATORY / PATHOLOGY
+Handles: Blood tests, urine tests, and sample analysis.
+Go here for: Doctor-ordered tests only. Bring your test request form. Results are typically ready within a few hours to 24 hours depending on the test.
+
+PHARMACY
+Handles: Dispensing medications prescribed by hospital doctors.
+Go here for: Collecting your prescription after seeing a doctor. Bring your prescription slip. Ask the pharmacist if you have questions about your medication.
+
+GENERAL TIPS FOR PATIENTS:
+- Always bring a valid ID and your health records or previous prescriptions if you have them.
+- If you are unsure which department to go to, ask at the reception or front desk — they will direct you.
+- Departments may have different operating hours. Emergency and casualty departments are open 24 hours, 7 days a week.
+- Specialists in most departments require a referral from a general doctor or the outpatient department.
