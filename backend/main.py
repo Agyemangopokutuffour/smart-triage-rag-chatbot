@@ -63,7 +63,23 @@ class JoinQueueRequest(BaseModel):
 @app.on_event("startup")
 def warm_up():
     get_collection()
-    
+
+EMERGENCY_KEYWORDS = [
+    "chest pain", "difficulty breathing", "can't breathe", "cannot breathe",
+    "shortness of breath", "unconscious", "seizure", "stroke", "heavy bleeding",
+    "heart attack", "fainted", "collapsed",
+]
+
+EMERGENCY_NOTICE = (
+    "⚠️ These symptoms can be serious. Please go to the Emergency Room "
+    "immediately or call emergency services (112, or 193 for an ambulance in Ghana). "
+    "Don't wait for the questions below."
+)
+
+def is_emergency(text: str) -> bool:
+    t = text.lower()
+    return any(k in t for k in EMERGENCY_KEYWORDS)
+
 @app.post("/chat")
 async def chat(body: ChatRequest):
     try:
@@ -119,6 +135,9 @@ When ready, end with exactly: [SYMPTOMS READY]: <short summary>"""
         )
 
         reply = response.choices[0].message.content.strip()
+
+        if is_emergency(body.message):
+            reply = f"{EMERGENCY_NOTICE}\n\n{reply}"
 
         updated = (incoming_history + [
             {"role": "user", "content": body.message},
