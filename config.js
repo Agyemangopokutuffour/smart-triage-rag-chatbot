@@ -1,1 +1,1 @@
-export const API_URL = "http://192.168.100.78:8000";
+export const API_URL = "https://smart-triage-rag-chatbot-api.onrender.com";

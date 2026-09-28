@@ -51,46 +51,52 @@ export default function ChatScreen({ navigation }) {
     setInput("");
     setLoading(true);
 
-    try {
-      const response = await axios.post(`${API_URL}/chat`, {
-        message: userText,
-        conversation_history: history,
-      });
+       try {
+         const response = await axios.post(
+           `${API_URL}/chat`,
+           {
+             message: userText,
+             conversation_history: history,
+           },
+           { timeout: 90000 },
+         );
 
-      const reply = response.data.reply;
-      const symptoms = extractSymptoms(reply);
-      if (symptoms) setReadySymptoms(symptoms);
+         const reply = response.data.reply;
+         const symptoms = extractSymptoms(reply);
+         if (symptoms) setReadySymptoms(symptoms);
 
-      const displayReply = reply
-        .replace(/\[SYMPTOMS READY\]:\s*.+/i, "")
-        .trim();
+         const displayReply = reply
+           .replace(/\[SYMPTOMS READY\]:\s*.+/i, "")
+           .trim();
 
-      const botMsg = {
-        id: (Date.now() + 1).toString(),
-        role: "assistant",
-        content: displayReply,
-      };
+         const botMsg = {
+           id: (Date.now() + 1).toString(),
+           role: "assistant",
+           content: displayReply,
+         };
 
-      setMessages((prev) => [...prev, botMsg]);
-      setHistory(response.data.updated_history || []);
-    } catch (error) {
-      console.error(error);
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: (Date.now() + 1).toString(),
-          role: "assistant",
-          content: "Sorry, I'm having trouble responding right now.",
-        },
-      ]);
-    } finally {
-      setLoading(false);
-    }
+         setMessages((prev) => [...prev, botMsg]);
+         setHistory(response.data.updated_history || []);
+       } catch (error) {
+         console.error(error);
+         setMessages((prev) => [
+           ...prev,
+           {
+             id: (Date.now() + 1).toString(),
+             role: "assistant",
+             content: "Sorry, I'm having trouble responding right now.",
+           },
+         ]);
+       } finally {
+         setLoading(false);
+       }
   };
 
   const goToTriage = () => {
     navigation.navigate("Triage", { prefillSymptoms: readySymptoms });
   };
+
+
 
   return (
     <View style={styles.container}>
@@ -138,7 +144,16 @@ export default function ChatScreen({ navigation }) {
           onChangeText={setInput}
           placeholder="Describe how you feel..."
           multiline
-          onSubmitEditing={sendMessage}
+          onKeyPress={(e) => {
+            if (
+              Platform.OS === "web" &&
+              e.nativeEvent.key === "Enter" &&
+              !e.nativeEvent.shiftKey
+            ) {
+              e.preventDefault();
+              sendMessage();
+            }
+          }}
         />
         <TouchableOpacity
           style={[
